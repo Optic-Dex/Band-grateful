@@ -1,0 +1,107 @@
+@import './variables';
+// menubar with dropdown
+nav {
+font-size: $p-size;  
+background-color: $color-heliotrope-gray;
+padding-bottom: 1vw;
+    ul {
+        // postion relative to get the submenu to drop down from its parent
+        position: relative;
+        // display flex to get the menu to be horizontal
+        display: flex;
+        justify-content: space-around;
+        li {
+                      
+            a {
+                color: $color-brown;
+                &:hover {
+                    background-color: $color-brown;
+                    color: $color-heliotrope-gray; 
+                }
+               
+
+            }
+            // this is the submenu for the dropdown 
+            ul {
+                position: absolute;
+                display: none;
+            }
+            &:hover {
+                ul {
+                   background-color: $color-heliotrope-gray;
+                   display: block;
+                  }
+               }
+        } 
+    }
+}
+#logo { 
+    @extend %logosize;
+    #img_logo1 {
+        position: absolute;
+        width: 250px;
+        top: -50px;
+        left: 44%;
+        @extend %slide-left;
+        
+    }
+    #img_logo2{
+        position: absolute;
+        width: 250px;
+        top: -50px;
+        right: 43%;
+        @extend %slide-right;
+     
+    }
+}
+
+#mobile-size {
+    display: none;
+}
+nav {
+    input[type=checkbox]{
+        display: none;
+    }
+    #burger-logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 680px) { 
+
+    nav {
+        ul {
+            display: none;
+             text-align: center;
+        }
+        #burger-logo {
+            display: inline-block;
+            width: 10%;
+            margin: 0 45%;
+        }
+        
+        }
+   
+    #logo { 
+        #img_logo1 {
+            width: 250px;
+            left: 31%;
+            
+        }
+        #img_logo2{
+            position: absolute;
+            width: 250px;
+            right: 33%;
+         
+        }
+    }
+    input[type=checkbox]{
+        &:checked ~{
+            #mobile-size {
+        display: block;
+       
+         }
+      
+      }
+}
+}

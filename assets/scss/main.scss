@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+
+}
+html {
+    font-size: 62.5%;
+  }
+
+
+@import './helper/animations';
+@import './helper/extend';
+@import './helper/footer';
+@import './helper/grid';
+@import './helper/mixins';
+@import './helper/nav';
+@import './helper/placeholders';
+@import './helper/variables';
+
+body {
+    background-color: $color-body;
+    max-width: 1920px;
+    main {
+        max-width: 1630px;
+        margin: 0 auto;
+    }
+}
+p {
+    color: $color-brown;
+    font-size: $p-size;
+}
+h1{
+    
+    color: $color-brown;
+    font-size: $h1-size;
+}
+h2 {
+    
+    color: $color-brown;
+    font-size: $h2-size;
+}
+header {
+    margin: 2vw auto;
+    img {
+        width: 100%;
+    }
+}
+article {
+    @include border(4px, solid, $color-brown);
+    margin: 3vw 0;
+}
+
+figure {
+    position: relative;
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    a{
+        color: $color-brown;
+        position: absolute;
+        font-size: $a-size;
+        bottom: -2vw;
+        right: 20px;
+
+    }
+}
+
+#first-grid {
+ margin: 4vw 0;
+}
+#band1-bg {
+	@include parallax-background('../img/band3');
+	width: 100%;
+	height: $parallax-height;
+	perspective: 1px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+#band2-bg {
+	@include parallax-background('../img/band2');
+	width: 100%;
+	height: $parallax-height;
+	perspective: 1px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+form {
+   
+    legend {
+        color: $color-brown;
+        font-size: $p-size;
+    }
+    
+    label{
+        color: $color-brown;
+        font-size: $p-size;
+       
+    }
+    width: 30vw;
+    margin: 2vw auto;
+    
+}
+
+fieldset {
+    @include border(4px, solid, $color-brown)
+}
+input[type=text] {
+    ::placeholder {
+        color: $color-brown;
+        font-size: $p-size;
+
+    }
+}
+input[type=submit]
+{
+    color: $color-brown;
+    padding: 0 1vw;
+    margin: 2vw 0;
+    font-size: $p-size;
+}
+@media screen and (max-width: 680px) {
+
+   
+ }

@@ -1,0 +1,46 @@
+@keyframes slide-left {
+    from {
+      left: 0%;
+      opacity: 0;
+    }
+    to {
+      left: 44%;
+      opacity: 1;
+    }
+}
+
+@keyframes slide-right {
+    from {
+      right: 0%;
+      opacity: 0;
+    }
+    to {
+      right: 43%; 
+      opacity: 1;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    @keyframes slide-left {
+        from {
+          left: -10%;
+          opacity: 0;
+        }
+        to {
+          left: 31%;
+          opacity: 1;
+        }
+    }
+    
+    @keyframes slide-right {
+        from {
+          right: -10%;
+          opacity: 0;
+        }
+        to {
+          right: 33%; 
+          opacity: 1;
+        }
+    }
+}
+
